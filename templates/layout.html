@@ -1,0 +1,33 @@
+<!--Base template-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Menu</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Web App Name </h1>
+            <nav>
+                <ul class="menu">
+                    <!--Triggers the python function when links clicked-->
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <!-- The child templates will fill in in this block -->
+        {%block content%}
+        {%endblock%}
+        <!-- ^Indicates the end of the block -->
+    </div>
+</body>
+
+</html>
